@@ -43,15 +43,16 @@ async function getBooksOrMoviesAsync(){
     }
 }
 
-getBooksAndMoviesAsync().then(function(results){
-    console.log("movies and books", {
+getBooksAndMoviesAsync().then(results => {
+    console.log("movies AND books", {
         movies: results.movies,
         books: results.books
     });
 });
 
-getBooksOrMoviesAsync().then(function(results){
-    console.log("movies OR books", {
-      results
+getBooksOrMoviesAsync()
+    .then(results => {
+        console.log("movies OR books", {
+          results
+        });
     });
-});
